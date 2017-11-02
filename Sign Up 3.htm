@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>#HOTSPOT#</title>
+      <link href="%BOOTSTRAP%/css/bootstrap.css" rel="stylesheet">
+      <link href="%THEME%/style.css" rel="stylesheet">
+      <link rel="stylesheet" href="%BOOTSTRAP%/font-awesome/css/font-awesome.min.css">
+      <script src="%BOOTSTRAP%/js/jquery.js"></script>
+      <script src="%BOOTSTRAP%/js/bootstrap.min.js"></script>
+      %HEAD_SCRIPT%
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+      <script src="%BOOTSTRAP%/js/html5shiv.js"></script>
+      <script src="%BOOTSTRAP%/js/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body class="body-background" %ONSTART%>
+      <div class="container">
+         <div class="container-global">
+            <div>
+	<style>.btn{display: inline-block;padding: 6px 12px;margin-bottom: 0;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;white-space: nowrap;vertical-align: middle;border-radius: 3px;box-shadow: none;border: 1px solid transparent;} .btn-ipay {background-color: #04448C;border-color: #04448C;color: #fff;} .btn-ipay:hover,.btn-ipay:focus,.btn-ipay:active,.btn-ipay.active{color:#fff;background-color:#367fa9;border-color:#367fa9;}</style>
+	<form action="https://community.ipaygh.com/gateway" id="ipay_checkout" method="post" name="ipay_checkout" target="_blank">
+		<input name="merchant_key" type="hidden" value="">
+		<input id="merchant_code" name="merchant_code" type="hidden" value="TST000000000856">
+		<input id="invoice_id" name="invoice_id" type="hidden" value="">
+		<table border="0" cellpadding="0px" cellspacing="0px">
+			<tr><td>Name</td><td>Contact Number</td></tr>
+			<tr><td><input title="Name" name="extra_name" type="text"></td><td><input title="Mobile number" name="extra_mobile" type="text"></td></tr>
+			<tr><td> </td></tr>
+			<tr><td>Email Address</td></tr><tr><td><input title="Email" name="extra_email" type="text"></td></tr>
+			<tr><td> </td></tr>
+			<tr><td>Description of Payment</td><td>Payment Amount (GH¢)</td></tr>
+			<tr><td><input title="Description" name="description" type="text"></td><td><input title="Total" name="total" size="10" type="text"></td></tr>
+			<tr><td> </td></tr>
+			<tr><td><button type="submit" class="btn btn-ipay"><i class="fa fa-money"></i>Pay With</button></td><td><img src="https://payments.ipaygh.com/app/webroot/img/iPay_payments.png" alt="iPay"></td></tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+		(function(){
+			Date.prototype.today = function () { return  this.getFullYear()+(((this.getMonth()+1) < 10)?"0":"") + (this.getMonth()+1) +((this.getDate() < 10)?"0":"") + this.getDate();};
+			Date.prototype.timeNow = function () { return ((this.getHours() < 10)?"0":"") + this.getHours() +((this.getMinutes() < 10)?"0":"") + this.getMinutes() +((this.getSeconds() < 10)?"0":"") + this.getSeconds();};
+			document.getElementById("invoice_id").value = document.getElementById("merchant_code").value+ new Date().today() + new Date().timeNow();
+		})();
+	</script>
+</div>                                             </div>
+      </div>
+   </body>
+</html>
